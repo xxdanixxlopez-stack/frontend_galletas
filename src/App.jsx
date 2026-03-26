@@ -11,7 +11,7 @@ import PerfilAdmin from "./components/PerfilAdmin";
 import { auth } from "./firebaseConfig";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
 function RutaPrivada({ user, children }) {
   if (!user) return <Navigate to="/" replace />;
